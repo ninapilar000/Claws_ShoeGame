@@ -1,0 +1,103 @@
+<!--
+
+Here's a coding challenge: create a claw machine game using all the skills you know (and more). For some more background information, you can read about claw machines here: https://en.wikipedia.org/wiki/Claw_crane
+
+Here is a suggested list of milestones:
+
+1. Put a claw image and left, right, and down buttons on the screen.
+2. Wire up the left and right buttons to move the claw left and right.
+3. Wire up the down button to animate the claw moving down and then coming back up.
+4. Keep track of the player's score. Increase the score everytime the user presses the down button. You'll need some vanilla Javascript for this.
+5. Place some images of items to pick up along the bottom of the screen.
+6. Detect if the claw is landing on any of the items and only increase score if it is. You will need vanilla Javascript for this!
+7. If the claw is landing on an item, animate the item to move up with the claw. Delete the item once the animation is done.
+8. Add a refill button to add more items to the machine.
+9. Add some more animations to the images, such as swapping out the open claw image to a closed claw image when it's coming up, rotating the items a bit, etc.
+10. Add bells and whistles that sound off when an item is successfully grabbed.
+11. Where can you go next with this?
+
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script> 
+  <link href="style.css" rel="stylesheet" type="text/css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <link href="style.css" rel="stylesheet" type="text/css"/>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+
+
+<body>
+  <!-- Score -->
+  <div id="score">
+    Score: 0
+  </div>
+
+  <!-- Claw -->
+  <div id="clawImage">
+    <img src="https://image.shutterstock.com/image-vector/claw-crane-skill-gripper-arm-260nw-1851619231.jpg">
+  </div>
+
+ 
+  <!-- Row 2 -->
+  
+  <div class="row">
+    <div id="leftButton">
+    <div class="col s12 m2 offset-s3 offset-m3">
+      <button class="btn waves-effect waves-purple" type="submit" name="action">
+        <i class="material-icons">arrow_back</i>
+      </button>
+    </div>
+    </div>
+
+    <div id="rightButton">
+    <div class="col s12 m4">
+      <button class="btn waves-effect waves-purple" type="submit" name="action">
+        <i class="material-icons">arrow_forward</i>
+      </button>
+    </div>
+  </div>
+  </div>
+
+  <!-- Row 3 -->
+  <div class="row">
+    <div id="downButton">
+    <div class="col s12 m4 offset-s4 offset-m4">
+      <button class="btn waves-effect waves-purple" type="submit" name="action">
+        <i class="material-icons">arrow_downward</i>
+      </button>
+    </div>
+  </div>
+  </div>
+
+  <!---Prizes--->
+<div class="row">
+  <div id="prizeOne">
+      <div class="col s12 m2">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6z9ks38UdPGoPwthqDmO2SN5iHWcS04f-eQ&usqp=CAU">
+    </div>
+  </div>
+
+  <div id="prizeTwo">
+      <div class="col s12 m2">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnI78mQb3JF1oM8MiHORXNT9h6l7pEf9MVtQ&usqp=CAU" height= "120px" width= "auto">
+    </div>
+  </div>
+
+  <div id="prizeThree">
+      <div class="col s12 m2">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxFPhXIf2AdLqnlv7n91WRo-vYWrdU5CxZEw&usqp=CAU">
+    </div>
+  </div>
+</div>
+</body>
+
+</html>
